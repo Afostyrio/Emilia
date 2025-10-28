@@ -1,0 +1,193 @@
+CLAVE,ESTADO,NOMBRE_COMPLETO,P1,P2,P3,P4,P5,P6,TOTAL,MEDALLA
+BCS3,Baja California Sur,Luis Reyes Ruiz,5,6,6,4,6,7,34,Oro
+CHI1,Chihuahua,Daniela Hernández Gómez,4,7,6,6,4,7,34,Oro
+COL2,Colima,Fernanda Gómez García,0,7,7,6,5,6,31,Oro
+GRO3,Guerrero,Roberto Jiménez Rodríguez,3,6,7,2,6,7,31,Oro
+PUE2,Puebla,Valentina Castro Gómez,7,6,7,2,3,6,31,Oro
+SON4,Sonora,Pedro Hernández Gómez,7,6,4,0,7,7,31,Oro
+TLX4,Tlaxcala,Ana Vargas Ortiz,7,7,4,5,6,2,31,Oro
+BCA5,Baja California,Ricardo Sánchez Álvarez,2,7,6,3,7,5,30,Oro
+TAB3,Tabasco,Miguel Álvarez Torres,6,7,6,4,7,0,30,Oro
+YUC1,Yucatán,Luis Pérez Rivera,5,6,6,7,6,0,30,Oro
+DGO1,Durango,Miguel Ramos Rodríguez,6,3,6,5,6,3,29,Oro
+JAL5,Jalisco,Victoria Sánchez Ruiz,0,7,4,7,5,6,29,Oro
+SIN1,Sinaloa,Camila Gómez Ortiz,4,7,6,6,1,5,29,Oro
+COL3,Colima,Sofía Álvarez Álvarez,0,5,7,5,6,5,28,Oro
+CHS2,Chiapas,Mariana Flores López,4,6,7,6,5,0,28,Oro
+QUE5,Querétaro,Gabriela Martínez Reyes,7,4,4,6,7,0,28,Oro
+AGS4,Aguascalientes,María Hernández Hernández,6,3,5,0,7,6,27,Plata
+MOR1,Morelos,Roberto Cruz Morales,6,4,6,6,0,5,27,Plata
+NAY6,Nayarit,Ricardo Castro García,4,6,5,7,1,4,27,Plata
+TAB6,Tabasco,Carlos López Morales,5,7,4,1,4,6,27,Plata
+JAL4,Jalisco,María Vargas Hernández,1,0,6,6,6,7,26,Plata
+ROO2,Quintana Roo,Pedro Rivera Flores,0,7,4,5,4,6,26,Plata
+ROO3,Quintana Roo,Jorge Jiménez Rivera,6,5,4,7,3,1,26,Plata
+SLP3,San Luis Potosí,Ana Álvarez Torres,7,4,5,4,6,0,26,Plata
+BCS2,Baja California Sur,Regina López Vázquez,0,7,5,7,2,4,25,Plata
+CHI6,Chihuahua,Fernanda Castro Vargas,6,6,6,7,0,0,25,Plata
+DGO3,Durango,Alejandro Sánchez Ruiz,6,5,1,6,2,5,25,Plata
+GRO6,Guerrero,Miguel Ortiz Álvarez,5,3,6,6,0,5,25,Plata
+HGO5,Hidalgo,Victoria García Hernández,0,6,2,7,6,4,25,Plata
+JAL2,Jalisco,Rafael Díaz López,7,5,0,4,3,6,25,Plata
+TLX5,Tlaxcala,Paula Ruiz Gómez,6,6,0,6,1,6,25,Plata
+VER1,Veracruz,Isabella Jiménez García,6,2,6,1,4,6,25,Plata
+VER4,Veracruz,Manuel Vázquez Morales,7,6,6,3,3,0,25,Bronce
+ZAC5,Zacatecas,Roberto Méndez Vargas,0,2,6,7,5,5,25,Bronce
+AGS3,Aguascalientes,Lucía Rodríguez Vargas,0,4,6,6,6,2,24,Bronce
+CAM6,Campeche,Antonio Jiménez Vázquez,5,0,6,0,7,6,24,Bronce
+COA2,Coahuila,Valentina Morales Castro,2,5,5,6,3,3,24,Bronce
+CHS1,Chiapas,Antonio Morales Ortiz,7,1,0,6,6,4,24,Bronce
+CHI3,Chihuahua,Ana Pérez García,7,4,0,4,3,6,24,Bronce
+GTO3,Guanajuato,Daniela Martínez Reyes,6,0,5,4,4,5,24,Bronce
+MEX3,Estado de México,Sofía Ruiz Méndez,2,0,7,7,6,2,24,Bronce
+NL3,Nuevo León,Camila Cruz Vázquez,7,3,6,5,0,3,24,Bronce
+ROO5,Quintana Roo,Diego Torres Vargas,6,1,6,4,0,7,24,Bronce
+SIN6,Sinaloa,Roberto Ruiz Vázquez,7,5,2,0,4,6,24,Bronce
+TLX3,Tlaxcala,Andrés Ramírez Rodríguez,1,5,4,6,2,6,24,Bronce
+YUC5,Yucatán,Ricardo García González,7,0,4,6,4,3,24,Bronce
+BCA4,Baja California,Ana Gómez Martínez,6,0,6,2,7,2,23,Bronce
+CAM5,Campeche,María Sánchez Vargas,5,4,5,0,6,3,23,Bronce
+GTO1,Guanajuato,Paula López García,5,6,0,7,0,5,23,Bronce
+OAX6,Oaxaca,Miguel Ortiz Torres,6,6,3,0,6,2,23,Bronce
+PUE4,Puebla,Isabella Vázquez Jiménez,4,0,0,7,6,6,23,Bronce
+SLP2,San Luis Potosí,Miguel Romero García,6,7,6,0,0,4,23,Bronce
+SIN5,Sinaloa,Lucía Méndez Vázquez,6,7,4,6,0,0,23,Bronce
+BCS1,Baja California Sur,Arturo Castro Vázquez,5,3,0,6,2,6,22,Bronce
+BCS4,Baja California Sur,Camila Álvarez Ruiz,6,0,6,6,2,2,22,Bronce
+COA4,Coahuila,Natalia Ortiz López,4,6,7,5,0,0,22,Bronce
+CMX3,Ciudad de México,Eduardo Reyes Álvarez,7,2,6,2,5,0,22,Bronce
+GTO5,Guanajuato,Gabriela Méndez Rodríguez,0,7,6,6,2,1,22,Bronce
+GRO5,Guerrero,Fernando Castro Sánchez,3,4,2,6,0,7,22,Bronce
+MIC6,Michoacán,Manuel Sánchez Álvarez,4,7,0,4,7,0,22,Bronce
+SON6,Sonora,Ana Ramos Álvarez,1,0,6,7,5,3,22,Bronce
+BCA6,Baja California,Jorge Reyes Álvarez,7,3,6,1,1,3,21,Bronce
+BCS6,Baja California Sur,Diego Pérez Rivera,0,6,6,7,2,0,21,Bronce
+COA6,Coahuila,Isabella Hernández Cruz,5,7,0,4,0,5,21,Bronce
+DGO4,Durango,Ana Vargas Ortiz,7,0,4,3,1,6,21,Bronce
+DGO6,Durango,Isabella Reyes Cruz,0,2,6,7,4,2,21,Bronce
+GRO1,Guerrero,Andrés Vázquez Morales,0,4,3,7,1,6,21,Bronce
+JAL6,Jalisco,Regina García Sánchez,3,6,6,6,0,0,21,Bronce
+OAX5,Oaxaca,Manuel López Vargas,6,5,6,0,1,3,21,Bronce
+ROO4,Quintana Roo,Carlos Pérez Ramos,6,6,6,0,0,3,21,Bronce
+ROO6,Quintana Roo,Sofía Rodríguez Hernández,6,6,4,1,4,0,21,Bronce
+SLP6,San Luis Potosí,Alejandro Martínez Rivera,6,4,6,2,0,3,21,Bronce
+SIN2,Sinaloa,Alejandro González Pérez,7,0,3,0,5,6,21,Bronce
+ZAC3,Zacatecas,Valentina Castro Cruz,2,0,6,5,7,1,21,Bronce
+ZAC6,Zacatecas,Camila Castro Ramírez,6,0,4,0,5,6,21,Bronce
+CHI4,Chihuahua,Fernanda Rivera Reyes,0,7,7,0,0,6,20,Bronce
+MEX6,Estado de México,Ricardo Rodríguez Flores,0,6,3,5,6,0,20,Bronce
+MIC3,Michoacán,Mariana Méndez Díaz,6,2,5,1,1,5,20,Bronce
+MOR6,Morelos,Fernanda Reyes Vargas,0,6,0,6,2,6,20,Bronce
+NL2,Nuevo León,Ricardo Ramos Ramos,6,0,0,7,0,7,20,Bronce
+QUE3,Querétaro,Daniela Díaz Vázquez,1,7,5,0,1,6,20,Bronce
+SLP4,San Luis Potosí,Mariana González López,5,0,7,0,2,6,20,Bronce
+TAM4,Tamaulipas,Javier Cruz Ramírez,0,6,4,0,5,5,20,Bronce
+BCA3,Baja California,Mariana Pérez Reyes,0,5,0,4,4,6,19,Bronce
+CMX2,Ciudad de México,Isabella Morales Álvarez,0,0,6,7,0,6,19,Bronce
+OAX4,Oaxaca,Alejandro García Vargas,4,0,3,2,4,6,19,Bronce
+TAB4,Tabasco,Lucía Ruiz Gómez,5,0,0,3,7,4,19,Bronce
+TLX2,Tlaxcala,Diego Morales Méndez,3,0,1,6,4,5,19,Bronce
+ZAC1,Zacatecas,Arturo Álvarez Martínez,7,3,0,1,1,7,19,Bronce
+ZAC2,Zacatecas,Mariana Méndez Vázquez,0,6,0,6,1,6,19,Bronce
+COL6,Colima,Isabella Álvarez Flores,4,5,0,2,1,6,18,Bronce
+GTO2,Guanajuato,Paula Ortiz Ramírez,0,6,4,4,3,1,18,Bronce
+HGO3,Hidalgo,Carlos Méndez Torres,3,4,6,0,5,0,18,Bronce
+JAL3,Jalisco,Valentina Reyes Torres,0,7,0,6,3,2,18,Bronce
+MEX4,Estado de México,Eduardo Ruiz Morales,0,0,7,6,3,2,18,Bronce
+MIC4,Michoacán,María Rodríguez Flores,7,0,1,1,3,6,18,Bronce
+NAY1,Nayarit,Sofía Vázquez Torres,6,0,4,7,0,1,18,M. H.
+NL4,Nuevo León,Fernanda Ramos Ramos,0,0,1,4,7,6,18,M. H.
+NL5,Nuevo León,Regina Ortiz Ramírez,0,0,6,6,0,6,18,
+SLP1,San Luis Potosí,Arturo Ramos Martínez,3,0,6,0,5,4,18,
+TAM1,Tamaulipas,Antonio Ramos Ramírez,3,3,0,6,3,3,18,
+VER3,Veracruz,Diana Ramos Torres,6,0,6,6,0,0,18,
+YUC4,Yucatán,Diana Gómez Ruiz,1,6,0,0,7,4,18,M. H.
+AGS1,Aguascalientes,Regina Cruz Martínez,4,3,2,7,0,1,17,M. H.
+AGS5,Aguascalientes,María Pérez García,0,5,4,2,0,6,17,
+HGO2,Hidalgo,Miguel Castro Vázquez,7,0,0,4,1,5,17,M. H.
+HGO4,Hidalgo,Pedro Reyes Méndez,6,4,0,4,3,0,17,
+MEX5,Estado de México,Jorge López Ramírez,0,3,3,5,6,0,17,
+NAY3,Nayarit,Camila Cruz Gómez,0,4,6,0,3,4,17,
+PUE1,Puebla,Fernanda López Castro,0,0,6,5,0,6,17,
+QUE1,Querétaro,Manuel Rivera Ortiz,0,1,6,4,6,0,17,
+ROO1,Quintana Roo,Alejandro Rodríguez Vargas,6,0,0,7,0,4,17,M. H.
+SON5,Sonora,Fernanda Sánchez Torres,6,0,0,6,0,5,17,
+TAM6,Tamaulipas,Mariana Ramos López,0,0,0,6,4,7,17,M. H.
+TLX1,Tlaxcala,Javier Ruiz Castro,6,4,0,6,0,1,17,
+YUC6,Yucatán,Lucía Sánchez Ramos,6,4,0,6,1,0,17,
+AGS2,Aguascalientes,Mariana Jiménez Rodríguez,6,7,0,3,0,0,16,M. H.
+BCA1,Baja California,Andrés Rivera Álvarez,0,7,6,3,0,0,16,M. H.
+COL4,Colima,Diego Méndez Romero,1,3,0,0,6,6,16,
+CMX4,Ciudad de México,Regina Gómez Morales,0,0,4,7,5,0,16,M. H.
+CMX5,Ciudad de México,Gabriela Vázquez Jiménez,0,7,4,2,3,0,16,M. H.
+CMX6,Ciudad de México,Arturo Díaz Vázquez,4,7,0,0,1,4,16,M. H.
+DGO5,Durango,Javier Flores Rodríguez,5,4,1,4,0,2,16,
+MIC2,Michoacán,Diana Díaz Hernández,0,7,3,3,2,1,16,M. H.
+MOR2,Morelos,Fernando Ortiz Martínez,6,0,4,6,0,0,16,
+NAY4,Nayarit,Sofía González López,6,4,2,4,0,0,16,
+NL6,Nuevo León,Antonio Gómez Cruz,6,5,0,0,5,0,16,
+SIN4,Sinaloa,Fernando Hernández García,0,4,0,4,5,3,16,
+TAB5,Tabasco,Roberto Pérez López,0,1,6,5,0,4,16,
+VER2,Veracruz,Jorge Vargas Ortiz,0,4,0,6,6,0,16,
+YUC3,Yucatán,María Reyes Vargas,0,5,0,1,6,4,16,
+CAM2,Campeche,Fernanda Ruiz Pérez,0,0,6,0,6,3,15,
+COA3,Coahuila,Daniela Martínez Ruiz,7,0,1,6,0,1,15,M. H.
+COL5,Colima,Isabella Vázquez Castro,0,3,7,5,0,0,15,M. H.
+CHS5,Chiapas,Carlos Romero Castro,1,0,6,4,2,2,15,
+CHI2,Chihuahua,Arturo Méndez Álvarez,0,1,3,4,1,6,15,
+GRO2,Guerrero,Diego Torres Hernández,0,6,4,1,0,4,15,
+MOR3,Morelos,María García Jiménez,0,1,1,2,5,6,15,
+OAX1,Oaxaca,Natalia Vargas Ramírez,7,0,3,0,1,4,15,M. H.
+PUE3,Puebla,Isabella Reyes Ruiz,1,0,6,5,3,0,15,
+PUE6,Puebla,Paula Hernández López,1,6,0,5,3,0,15,
+QUE2,Querétaro,Regina Morales Castro,1,7,0,1,0,6,15,M. H.
+TAM2,Tamaulipas,Lucía Gómez Romero,2,0,0,7,0,6,15,M. H.
+COA1,Coahuila,Antonio Reyes Gómez,1,0,5,1,0,7,14,M. H.
+COA5,Coahuila,Mariana Rivera Romero,4,1,2,0,1,6,14,
+CMX1,Ciudad de México,Eduardo García Gómez,0,1,0,4,4,5,14,
+MIC1,Michoacán,Luis Flores García,5,2,6,0,1,0,14,
+SIN3,Sinaloa,Camila Flores Rivera,3,0,1,3,1,6,14,
+TAB1,Tabasco,Fernando Romero García,6,6,0,0,2,0,14,
+TAM3,Tamaulipas,Jorge Pérez Flores,6,5,0,2,1,0,14,
+VER5,Veracruz,Andrea Pérez López,0,0,6,0,3,5,14,
+CAM3,Campeche,Valentina Gómez García,0,0,3,6,4,0,13,
+CHS4,Chiapas,Paula Álvarez Vargas,0,3,0,4,0,6,13,
+NL1,Nuevo León,Victoria Rivera González,0,1,0,4,5,3,13,
+QUE4,Querétaro,Arturo Ruiz Vargas,7,0,0,0,6,0,13,M. H.
+SON2,Sonora,Javier Ramírez Ruiz,0,7,2,0,4,0,13,M. H.
+YUC2,Yucatán,Carlos Cruz García,2,0,7,0,0,4,13,M. H.
+AGS6,Aguascalientes,Manuel Rodríguez Jiménez,1,7,0,4,0,0,12,M. H.
+BCS5,Baja California Sur,Isabella Torres Hernández,0,4,3,5,0,0,12,
+GTO4,Guanajuato,Victoria Vargas Hernández,7,0,0,1,4,0,12,M. H.
+OAX3,Oaxaca,Fernanda Díaz Flores,6,0,1,4,1,0,12,
+QUE6,Querétaro,Javier Díaz Cruz,0,4,0,6,0,2,12,
+SON1,Sonora,Isabella Hernández Ramos,0,6,5,1,0,0,12,
+VER6,Veracruz,Ricardo Hernández López,0,1,6,4,1,0,12,
+BCA2,Baja California,Pedro Hernández Rivera,3,6,2,0,0,0,11,
+CAM1,Campeche,Eduardo Ramírez Romero,6,1,1,0,3,0,11,
+DGO2,Durango,Camila Ruiz Ortiz,0,0,2,0,3,6,11,
+HGO6,Hidalgo,Eduardo Romero López,7,0,0,0,4,0,11,M. H.
+MEX2,Estado de México,Eduardo Morales Díaz,6,0,0,5,0,0,11,
+OAX2,Oaxaca,Antonio Hernández Rodríguez,3,0,0,0,6,2,11,
+SLP5,San Luis Potosí,Andrés Rivera Ramos,5,6,0,0,0,0,11,
+TAM5,Tamaulipas,Paula Hernández Torres,0,5,0,0,0,6,11,
+TLX6,Tlaxcala,Roberto Álvarez Pérez,4,0,6,0,1,0,11,
+ZAC4,Zacatecas,Ana Rodríguez López,4,1,0,6,0,0,11,
+CHS3,Chiapas,Eduardo Ruiz Martínez,0,0,1,0,3,6,10,
+MEX1,Estado de México,Sofía Reyes Díaz,0,2,0,0,3,5,10,
+MOR4,Morelos,Eduardo López García,4,0,6,0,0,0,10,
+MOR5,Morelos,Rafael Ortiz Ramírez,0,6,0,2,0,2,10,
+NAY5,Nayarit,Natalia Castro Flores,7,3,0,0,0,0,10,M. H.
+CAM4,Campeche,María García Méndez,5,0,0,1,0,2,8,
+COL1,Colima,Manuel Flores Álvarez,0,0,0,2,0,5,7,
+GTO6,Guanajuato,Fernando Martínez Gómez,0,0,7,0,0,0,7,M. H.
+GRO4,Guerrero,Alejandro Ramírez Castro,4,2,0,0,0,1,7,
+HGO1,Hidalgo,Miguel González Morales,3,1,0,0,0,3,7,
+PUE5,Puebla,Fernanda Torres Ramos,0,5,0,2,0,0,7,
+TAB2,Tabasco,Regina García Rivera,0,0,0,4,0,3,7,
+CHS6,Chiapas,Antonio Álvarez Martínez,3,3,0,0,0,0,6,
+MIC5,Michoacán,Miguel Ortiz Flores,3,0,0,2,1,0,6,
+NAY2,Nayarit,Arturo Vargas Rodríguez,4,0,0,2,0,0,6,
+SON3,Sonora,Gabriela Flores Ruiz,0,0,5,0,1,0,6,
+CHI5,Chihuahua,María Torres Castro,0,0,0,3,0,1,4,
+JAL1,Jalisco,Javier Jiménez Cruz,1,3,0,0,0,0,4,

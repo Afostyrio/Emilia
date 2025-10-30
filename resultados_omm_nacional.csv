@@ -31,8 +31,8 @@ HGO5,Hidalgo,Victoria García Hernández,0,6,2,7,6,4,25,Plata
 JAL2,Jalisco,Rafael Díaz López,7,5,0,4,3,6,25,Plata
 TLX5,Tlaxcala,Paula Ruiz Gómez,6,6,0,6,1,6,25,Plata
 VER1,Veracruz,Isabella Jiménez García,6,2,6,1,4,6,25,Plata
-VER4,Veracruz,Manuel Vázquez Morales,7,6,6,3,3,0,25,Bronce
-ZAC5,Zacatecas,Roberto Méndez Vargas,0,2,6,7,5,5,25,Bronce
+VER4,Veracruz,Manuel Vázquez Morales,7,6,6,3,3,0,25,Plata
+ZAC5,Zacatecas,Roberto Méndez Vargas,0,2,6,7,5,5,25,Plata
 AGS3,Aguascalientes,Lucía Rodríguez Vargas,0,4,6,6,6,2,24,Bronce
 CAM6,Campeche,Antonio Jiménez Vázquez,5,0,6,0,7,6,24,Bronce
 COA2,Coahuila,Valentina Morales Castro,2,5,5,6,3,3,24,Bronce
@@ -95,13 +95,13 @@ HGO3,Hidalgo,Carlos Méndez Torres,3,4,6,0,5,0,18,Bronce
 JAL3,Jalisco,Valentina Reyes Torres,0,7,0,6,3,2,18,Bronce
 MEX4,Estado de México,Eduardo Ruiz Morales,0,0,7,6,3,2,18,Bronce
 MIC4,Michoacán,María Rodríguez Flores,7,0,1,1,3,6,18,Bronce
-NAY1,Nayarit,Sofía Vázquez Torres,6,0,4,7,0,1,18,M. H.
-NL4,Nuevo León,Fernanda Ramos Ramos,0,0,1,4,7,6,18,M. H.
-NL5,Nuevo León,Regina Ortiz Ramírez,0,0,6,6,0,6,18,
-SLP1,San Luis Potosí,Arturo Ramos Martínez,3,0,6,0,5,4,18,
-TAM1,Tamaulipas,Antonio Ramos Ramírez,3,3,0,6,3,3,18,
-VER3,Veracruz,Diana Ramos Torres,6,0,6,6,0,0,18,
-YUC4,Yucatán,Diana Gómez Ruiz,1,6,0,0,7,4,18,M. H.
+NAY1,Nayarit,Sofía Vázquez Torres,6,0,4,7,0,1,18,Bronce
+NL4,Nuevo León,Fernanda Ramos Ramos,0,0,1,4,7,6,18,Bronce
+NL5,Nuevo León,Regina Ortiz Ramírez,0,0,6,6,0,6,18,Bronce
+SLP1,San Luis Potosí,Arturo Ramos Martínez,3,0,6,0,5,4,18,Bronce
+TAM1,Tamaulipas,Antonio Ramos Ramírez,3,3,0,6,3,3,18,Bronce
+VER3,Veracruz,Diana Ramos Torres,6,0,6,6,0,0,18,Bronce
+YUC4,Yucatán,Diana Gómez Ruiz,1,6,0,0,7,4,18,Bronce
 AGS1,Aguascalientes,Regina Cruz Martínez,4,3,2,7,0,1,17,M. H.
 AGS5,Aguascalientes,María Pérez García,0,5,4,2,0,6,17,
 HGO2,Hidalgo,Miguel Castro Vázquez,7,0,0,4,1,5,17,M. H.

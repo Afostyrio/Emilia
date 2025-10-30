@@ -6,7 +6,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 gran_tabla = pandas.read_csv("resultados_omm_nacional.csv").fillna("")
-estados = gran_tabla['ESTADO'].unique()
+estados = sorted(gran_tabla['ESTADO'].unique())
 corte_bronce = gran_tabla[gran_tabla['MEDALLA'] == "Bronce"]["TOTAL"].min()
 corte_plata = gran_tabla[gran_tabla['MEDALLA'] == "Plata"]["TOTAL"].min()
 corte_oro = gran_tabla[gran_tabla['MEDALLA'] == "Oro"]["TOTAL"].min()

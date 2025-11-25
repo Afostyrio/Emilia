@@ -50,6 +50,9 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 	doc.append(pl.Command("input", "inputs/tex/OlimpiadasInternacionales.tex"))
 
 	with doc.create(pl.Section("Historia de México en las Olimpiadas Internacionales")):
+		international_olympiads= ["IMO", "OIM", "OMCC", "APMO", "EGMO", "RMM", "IGO"]
+		mex_history = pandas.read_csv("inputs/csv/historial_MEX.csv").fillna("")
+
 		with doc.create(pl.Subsection("México en la IMO")):
 			doc.append("En 1959 Rumania organizó la Primera Olimpiada Internacional de Matemáticas con la participación de sólo 7 países: Hungría, la URSS, Bulgaria, Polonia, Checoslovaquia, la República Democrática Alemana y Rumania. A partir de entonces la Olimpiada Internacional se celebra año con año (casi siempre en julio) con la participación de países de los cinco continentes.")
 			doc.append(pl.NoEscape("\n"))

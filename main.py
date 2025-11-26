@@ -53,125 +53,36 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 		international_olympiads= ["IMO", "OIM", "OMCC", "APMO", "EGMO", "RMM", "IGO"]
 		mex_history = pandas.read_csv("inputs/csv/historial_MEX.csv").fillna("")
 
-		with doc.create(pl.Subsection("México en la IMO")):
-			doc.append("En 1959 Rumania organizó la Primera Olimpiada Internacional de Matemáticas con la participación de sólo 7 países: Hungría, la URSS, Bulgaria, Polonia, Checoslovaquia, la República Democrática Alemana y Rumania. A partir de entonces la Olimpiada Internacional se celebra año con año (casi siempre en julio) con la participación de países de los cinco continentes.")
-			doc.append(pl.NoEscape("\n"))
-			doc.append(pl.NoEscape(r"Los ganadores del primer Concurso Nacional asistieron a la 29\textsuperscript{a} Olimpiada Internacional de Matemáticas, celebrada en Canberra, Australia, en julio de 1988; a partir de ese año México ha asistido a la emisión anual de la Olimpiada Internacional de Matemáticas. México organizó la 46\textsuperscript{a} Olimpiada Internacional en Mérida, Yucatán en julio de 2005."))
-			doc.append(pl.NoEscape("\n"))
-			doc.append("Los resultados de las delegaciones mexicanas en la Olimpiada Internacional han sido:")
+		historial_nacional = pandas.read_csv("inputs/csv/historial_MEX.csv").fillna("")
+		for olympiad in international_olympiads:
+			with doc.create(pl.Subsection(f"México en la {olympiad}")):
+				doc.append(pl.Command("input", f"inputs/tex/InternacionalesMex/{olympiad}.tex"))
+				datos_olimpiada = historial_nacional[historial_nacional["Olimpiada"] == olympiad].astype('int32', errors='ignore').values
+				if datos_olimpiada[0,2] == "":
+					with doc.create(pl.LongTable("|c|c|c|c|c|c|c|")) as tabla:
+						tabla.append(pl.NoEscape(r"\hline \textit{Año}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
+						tabla.append(pl.Command("endfirsthead"))
+						tabla.append(pl.NoEscape(r"\hline \multicolumn{7}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
+						tabla.append(pl.Command("endhead"))
+						tabla.append(pl.NoEscape(r"\hline \multicolumn{7}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
+						tabla.append(pl.Command("endfoot"))
+						tabla.add_hline()
+						tabla.append(pl.Command("endlastfoot"))
 
-
-			with doc.create(pl.LongTable("|c|l|c|c|")) as tabla_IMO:
-				tabla_IMO.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_IMO.append(pl.Command("endfirsthead"))
-				tabla_IMO.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_IMO.append(pl.Command("endhead"))
-				tabla_IMO.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_IMO.append(pl.Command("endfoot"))
-				tabla_IMO.add_hline()
-				tabla_IMO.append(pl.Command("endlastfoot"))
-				IMO_Mex = pandas.read_csv("inputs/csv/historial_IMO.csv").values
-				for item in IMO_Mex:
-					tabla_IMO.add_row(item)
-		with doc.create(pl.Subsection("México en la OIM")):
-			doc.append(pl.NoEscape(r"""En 1985 la Organización de Estados Iberoamericanos para la Educación, la Ciencia y la Cultura, convocó a la Primera Olimpiada Iberoamericana de Matemáticas, celebrada en Colombia con la participación de 10 países. A partir de la 4\textsuperscript{a} Olimpiada Iberoamericana de Matemáticas, celebrada en La Habana, Cuba, México ha participado anualmente en esta Olimpiada.
-			
-México ha organizado ya cuatro Olimpiadas Iberoamericanas de Matemáticas: la 8\textsuperscript{a} en 1993, la 12\textsuperscript{a} en 1997, la 24\textsuperscript{a} en 2009 y la 34\textsuperscript{a} en 2019.
-			
-Los resultados de las Delegaciones Mexicanas en las Olimpiadas Iberoamericanas han sido:"""
-			))
-			with doc.create(pl.LongTable("|c|l|c|c|")) as tabla_OIM:
-				tabla_OIM.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_OIM.append(pl.Command("endfirsthead"))
-				tabla_OIM.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_OIM.append(pl.Command("endhead"))
-				tabla_OIM.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_OIM.append(pl.Command("endfoot"))
-				tabla_OIM.add_hline()
-				tabla_OIM.append(pl.Command("endlastfoot"))
-
-				OIM_Mex = pandas.read_csv("inputs/csv/historial_OIM.csv").values
-				for item in OIM_Mex:
-					tabla_OIM.add_row(item)
-		
-		with doc.create(pl.Subsection("México en la OMCC")):
-			doc.append(pl.NoEscape(r"Para promover la participación de los países de América Central y el Caribe en concursos de matemáticas, a partir de 1999 se organizó la Olimpiada Matemática de Centroamérica y el Caribe, con sede en Costa Rica. A la primera olimpiada asistieron 10 delegaciones. Desde entonces México ha participado en cada una de las ediciones y la ha organizado tres veces. La 4\textsuperscript{a} en 2002 con sede en Mérida, Yucatán, la 13\textsuperscript{a} en 2012 con sede en Colima, Colima y la 16\textsuperscript{a} en Cuernavaca, Morelos."))
-			doc.append(pl.NoEscape("\n"))
-			doc.append("Los resultados de las Delegaciones Mexicanas en las Olimpiadas Centroamericanas y del Caribe han sido:")
-			with doc.create(pl.LongTable("|c|l|c|c|")) as tabla_OMCC:
-				tabla_OMCC.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_OMCC.append(pl.Command("endfirsthead"))
-				tabla_OMCC.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_OMCC.append(pl.Command("endhead"))
-				tabla_OMCC.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_OMCC.append(pl.Command("endfoot"))
-				tabla_OMCC.add_hline()
-				tabla_OMCC.append(pl.Command("endlastfoot"))
-
-				OMCC_Mex = pandas.read_csv("inputs/csv/historial_OMCC.csv").values
-				for item in OMCC_Mex:
-					tabla_OMCC.add_row(item)
-		with doc.create(pl.Subsection("México en la APMO")):
-			doc.append("Desde 1990, los ganadores del Concurso Nacional participan anualmente en la Olimpiada de Matemáticas de la Cuenca del Pacífico. En el 2000 y en el 2009 México no participó en esta olimpiada. En el 2001 y en el 2002 se participó, mas no se publicaron resultados. Del 2016 al 2019, México fue el país organizador de esta olimpiada.")
-			with doc.create(pl.LongTable("|c|c|c|")) as tabla_APMO:
-				tabla_APMO.append(pl.NoEscape(r"\hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_APMO.append(pl.Command("endfirsthead"))
-				tabla_APMO.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_APMO.append(pl.Command("endhead"))
-				tabla_APMO.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_APMO.append(pl.Command("endfoot"))
-				tabla_APMO.add_hline()
-				tabla_APMO.append(pl.Command("endlastfoot"))
-
-				APMO_Mex = pandas.read_csv("inputs/csv/historial_APMO.csv").values
-				for item in APMO_Mex:
-					tabla_APMO.add_row(item)
-		with doc.create(pl.Subsection("México en la EGMO")):
-			doc.append("En abril del 2014 México participó por primera vez en la III Olimpiada Europea Femenil de Matemáticas (EGMO, por sus siglas en inglés) en Antalya, Turquía. Esta olimpiada es para países europeos pero se permite la participación por invitación de equipos no europeos.")
-			with doc.create(pl.LongTable("|c|l|c|c|")) as tabla_EGMO:
-				tabla_EGMO.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_EGMO.append(pl.Command("endfirsthead"))
-				tabla_EGMO.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_EGMO.append(pl.Command("endhead"))
-				tabla_EGMO.append(pl.NoEscape(r"\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_EGMO.append(pl.Command("endfoot"))
-				tabla_EGMO.add_hline()
-				tabla_EGMO.append(pl.Command("endlastfoot"))
-
-				EGMO_Mex = pandas.read_csv("inputs/csv/historial_EGMO.csv").values
-				for item in EGMO_Mex:
-					tabla_EGMO.add_row(item)
-		with doc.create(pl.Subsection("México en la RMM")):
-			doc.append("En 2015 México participó por primera vez en la Rumana de Campeones con un equipo de 3 estudiantes. La última vez que se participó en esta competencia fue en el 2017.")
-			with doc.create(pl.LongTable("|c|c|c|")) as tabla_RMM:
-				tabla_RMM.append(pl.NoEscape(r"\hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_RMM.append(pl.Command("endfirsthead"))
-				tabla_RMM.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_RMM.append(pl.Command("endhead"))
-				tabla_RMM.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_RMM.append(pl.Command("endfoot"))
-				tabla_RMM.add_hline()
-				tabla_RMM.append(pl.Command("endlastfoot"))
-
-				RMM_Mex = pandas.read_csv("inputs/csv/historial_RMM.csv").values
-				for item in RMM_Mex:
-					tabla_RMM.add_row(item)
-		with doc.create(pl.Subsection("México en la IGO")):
-			doc.append("En el 2015 se realizó por primera vez esta olimpiada a nivel internacional. México ha participado en las tres primeras con un equipo completo de 12 estudiantes.")
-			with doc.create(pl.LongTable("|c|c|c|")) as tabla_IGO:
-				tabla_IGO.append(pl.NoEscape(r"\hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_IGO.append(pl.Command("endfirsthead"))
-				tabla_IGO.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\textit{No. de Países}&\textit{Lugar de México} \\\hline\hline"))
-				tabla_IGO.append(pl.Command("endhead"))
-				tabla_IGO.append(pl.NoEscape(r"\hline \multicolumn{3}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
-				tabla_IGO.append(pl.Command("endfoot"))
-				tabla_IGO.add_hline()
-				tabla_IGO.append(pl.Command("endlastfoot"))
-
-				IGO_Mex = pandas.read_csv("inputs/csv/historial_IGO.csv").values
-				for item in IGO_Mex:
-					tabla_IGO.add_row(item)
-			
+						for item in datos_olimpiada:
+							tabla.add_row([item[1], *item[3:]])
+				else:
+					with doc.create(pl.LongTable("|c|l|c|c|c|c|c|c|")) as tabla:
+						tabla.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
+						tabla.append(pl.Command("endfirsthead"))
+						tabla.append(pl.NoEscape(r"\hline \multicolumn{8}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
+						tabla.append(pl.Command("endhead"))
+						tabla.append(pl.NoEscape(r"\hline \multicolumn{8}{|r|}{{\textit{Continúa en la página siguiente...}}} \\ \hline"))
+						tabla.append(pl.Command("endfoot"))
+						tabla.add_hline()
+						tabla.append(pl.Command("endlastfoot"))
+						for item in datos_olimpiada:
+							tabla.add_row(item[1:])		
 
 
 with doc.create(pl.Chapter("Reporte del concurso nacional")):

@@ -6,3 +6,15 @@
         {\normalfont\LARGE}{\raggedleft{\huge CAPÍTULO \thechapter} \\ }{0pt}%
         {\titlerule\vspace*{.9\baselineskip}\raggedleft}[\normalsize\vspace*{.8\baselineskip}\titlerule]
 \usepackage{hyperref}
+
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+	\renewcommand{\sectionmark}[1]{ \markright{#1} }
+
+	\fancyhf{}
+	\fancyhead[LE,RO]{\textsf{\thepage}}
+	\fancyhead[RE]{\nouppercase{\textsf{\leftmark}} }
+	\fancyhead[LO]{\nouppercase{\textsf{\thesection{} \rightmark}} }
+	\fancyfoot[C]{\textsf{Olimpiada Mexicana de Matemáticas, 2025}}
+	\renewcommand{\footrulewidth}{1.5pt}

@@ -1,4 +1,4 @@
-Olimpiada,Anno,Sede,NoPaises,LugarMéxico,Oro,Plata,Bronce,Mención
+Olimpiada,Anno,Sede,NoPaises,LugarMexico,Oro,Plata,Bronce,Mencion
 IMO,1988,Australia,49,37,0,0,1,2
 IMO,1989,Re. Fed. de Alemania,50,31,0,0,1,2
 IMO,1990,Re. Popular de China,54,36,0,0,1,2
@@ -153,3 +153,9 @@ IGO,2018,,56,11,0,5,10,0
 IGO,2019,,55,11,0,5,15,0
 IGO,2020,,49,,0,4,13,0
 IGO,2021,,56,,0,5,8,0
+RMM,2021,,22,18,0,0,1,4
+PAGMO,2021,Virtual,18,3,1,2,1,0
+PAGMO,2022,Virtual,16,4,0,4,0,0
+PAGMO,2023,Costa Rica,14,2,0,3,1,0
+PAGMO,2024,México,15,4,0,2,2,0
+PAGMO,2025,Brasil,15,2,1,2,1,0

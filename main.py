@@ -17,8 +17,11 @@ doc.packages.append(pl.Package("inputs/Preamble"))
 doc.append(pl.Command("title", "Olimpiada Mexicana de Matemáticas"))
 doc.append(pl.Command("author", "TEST"))
 doc.append(pl.Command("maketitle"))
+doc.append(pl.Command("pagenumbering", "roman"))
 doc.append(pl.Command("tableofcontents"))
+doc.append(pl.Command("clearpage"))
 
+doc.append(pl.Command("pagenumbering", "arabic"))
 with doc.create(pl.Chapter("Presentación", numbering=False)):
 	doc.append(pl.Command("addcontentsline", ["toc", "chapter", "Presentación"]))
 	doc.append(pl.Command("input", "inputs/tex/Presentacion.tex"))
@@ -50,14 +53,14 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 	doc.append(pl.Command("input", "inputs/tex/OlimpiadasInternacionales.tex"))
 
 	with doc.create(pl.Section("Historia de México en las Olimpiadas Internacionales")):
-		international_olympiads= ["IMO", "OIM", "OMCC", "APMO", "EGMO", "RMM", "IGO"]
+		international_olympiads= ["IMO", "OIM", "OMCC", "APMO", "EGMO", "PAGMO", "RMM", "IGO"]
 		mex_history = pandas.read_csv("inputs/csv/historial_MEX.csv").fillna("")
 
 		historial_nacional = pandas.read_csv("inputs/csv/historial_MEX.csv").fillna("")
 		for olympiad in international_olympiads:
 			with doc.create(pl.Subsection(f"México en la {olympiad}")):
 				doc.append(pl.Command("input", f"inputs/tex/InternacionalesMex/{olympiad}.tex"))
-				datos_olimpiada = historial_nacional[historial_nacional["Olimpiada"] == olympiad].astype('int32', errors='ignore').values
+				datos_olimpiada = historial_nacional[historial_nacional["Olimpiada"] == olympiad].sort_values(by='Anno').values
 				if datos_olimpiada[0,2] == "":
 					with doc.create(pl.LongTable("|c|c|c|c|c|c|c|")) as tabla:
 						tabla.append(pl.NoEscape(r"\hline \textit{Año}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
@@ -70,7 +73,12 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 						tabla.append(pl.Command("endlastfoot"))
 
 						for item in datos_olimpiada:
-							tabla.add_row([item[1], *item[3:]])
+							new_row = [item[1]]
+							for number in item[3:]:
+								try: number = int(number)
+								except: pass
+								new_row.append(number)
+							tabla.add_row(new_row)
 				else:
 					with doc.create(pl.LongTable("|c|l|c|c|c|c|c|c|")) as tabla:
 						tabla.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
@@ -82,7 +90,12 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 						tabla.add_hline()
 						tabla.append(pl.Command("endlastfoot"))
 						for item in datos_olimpiada:
-							tabla.add_row(item[1:])		
+							new_row = [item[1], item[2]]
+							for number in item[3:]:
+								try: number = int(number)
+								except: pass
+								new_row.append(number)
+							tabla.add_row(new_row)
 
 
 with doc.create(pl.Chapter("Reporte del concurso nacional")):

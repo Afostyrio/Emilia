@@ -14,10 +14,8 @@ corte_oro = gran_tabla[gran_tabla['MEDALLA'] == "Oro"]["TOTAL"].min()
 doc = pl.Document(documentclass="book", document_options=["12pt", "spanish"])
 doc.packages.append(pl.Package("inputs/Preamble"))
 
-doc.append(pl.Command("title", "Olimpiada Mexicana de Matemáticas"))
-doc.append(pl.Command("author", "TEST"))
-doc.append(pl.Command("maketitle"))
 doc.append(pl.Command("pagenumbering", "roman"))
+doc.append(pl.Command("input", "inputs/tex/Portada.tex"))
 doc.append(pl.Command("tableofcontents"))
 doc.append(pl.Command("clearpage"))
 

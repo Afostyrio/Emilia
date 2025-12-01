@@ -24,7 +24,8 @@ doc.append(pl.Command("clearpage"))
 doc.append(pl.Command("pagenumbering", "arabic"))
 with doc.create(pl.Chapter("Presentación", numbering=False)):
 	doc.append(pl.Command("addcontentsline", ["toc", "chapter", "Presentación"]))
-	doc.append(pl.Command("input", "inputs/tex/Presentacion.tex"))
+	doc.append(pl.Command("addcontentsline", ["toc", "section", "Patrocinadores"]))
+	doc.append(pl.Command("input", "inputs/tex/Presentación.tex"))
 
 with doc.create(pl.Chapter("Concurso Nacional")):
 	with doc.create(pl.Section("Sedes del concurso")):
@@ -96,7 +97,9 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 								except: pass
 								new_row.append(number)
 							tabla.add_row(new_row)
-
+		
+with doc.create(pl.Chapter("Últimas noticias")):
+	doc.append(pl.Command("input", "inputs/tex/ÚltimasNoticias.tex"))
 
 with doc.create(pl.Chapter("Reporte del concurso nacional")):
 	with doc.create(pl.Section("Ganadores del concurso nacional")):
@@ -207,5 +210,10 @@ with doc.create(pl.Chapter("Reporte del concurso nacional")):
 			figure.add_image("Test.png")
 			figure.add_caption("Número de alumnos por puntaje")
 
+with doc.create(pl.Chapter("Próximos eventos")):
+	doc.append(pl.Command("input", "inputs/tex/PróximosEventos.tex"))
+
+with doc.create(pl.Chapter("Lineamientos de la OMM")):
+	doc.append(pl.Command("input", "inputs/tex/Lineamientos.tex"))
 
 doc.generate_pdf('Engargolado', clean_tex=False)

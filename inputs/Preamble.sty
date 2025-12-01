@@ -18,3 +18,8 @@
 	\fancyhead[LO]{\nouppercase{\textsf{\thesection{} \rightmark}} }
 	\fancyfoot[C]{\textsf{Olimpiada Mexicana de Matemáticas, 2025}}
 	\renewcommand{\footrulewidth}{1.5pt}
+
+\usepackage{enumitem}
+	\newlist{lineamientos}{enumerate}{3}
+	\setlist[lineamientos,1,3]{label=\Roman*., format=\textbf}
+	\setlist[lineamientos,2]{label=\arabic*)}

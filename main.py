@@ -214,4 +214,9 @@ with doc.create(pl.Chapter("Próximos eventos")):
 with doc.create(pl.Chapter("Lineamientos de la OMM")):
 	doc.append(pl.Command("input", "inputs/tex/Lineamientos.tex"))
 
+with doc.create(pl.Chapter("Directorio del Comité Organizador de la OMM")):
+	with doc.create(pl.Section("Directorio de los delegados estatales")):
+				# Aquí va a haber cosas de los delegados, estoy trabajando en el csv
+
+
 doc.generate_pdf('Engargolado', clean_tex=False)

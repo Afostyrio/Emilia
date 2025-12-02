@@ -216,7 +216,23 @@ with doc.create(pl.Chapter("Lineamientos de la OMM")):
 
 with doc.create(pl.Chapter("Directorio del Comité Organizador de la OMM")):
 	with doc.create(pl.Section("Directorio de los delegados estatales")):
-				# Aquí va a haber cosas de los delegados, estoy trabajando en el csv
+		delegados_estatales = pandas.read_csv("inputs/csv/directorio_delegados_estatales.csv").fillna("").values
+		for delegado in delegados_estatales:
+			doc.append(pl.Command("noindent"))
+			doc.append(pl.NoEscape(f"{bold(delegado[0])} -- {italic(delegado[1])}"))
+			doc.append(pl.NoEscape(r"\\"))
+			doc.append(pl.NoEscape(f"{delegado[2]}"))
+			doc.append(pl.NoEscape(r"\\"))
+			doc.append(pl.Command("href", ["mailto:" + pl.NoEscape(delegado[3]), pl.NoEscape(delegado[3])]))
+			doc.append(pl.NoEscape(r"\\"))
+			if delegado[4] != "":
+				doc.append(pl.Command("href", ["mailto:" + pl.NoEscape(delegado[4]), pl.NoEscape(delegado[4])]))
+				doc.append(pl.NoEscape(r"\\"))
+			if delegado[5] != "":
+				doc.append(pl.Command("url", pl.NoEscape(delegado[5])))
+				doc.append(pl.NoEscape(r"\\"))
+			doc.append(pl.Command("par"))
+			doc.append(pl.Command("bigskip"))
 
 
 doc.generate_pdf('Engargolado', clean_tex=False)

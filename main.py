@@ -233,6 +233,20 @@ with doc.create(pl.Chapter("Directorio del Comité Organizador de la OMM")):
 				doc.append(pl.NoEscape(r"\\"))
 			doc.append(pl.Command("par"))
 			doc.append(pl.Command("bigskip"))
-
+	with doc.create(pl.Section("Directorio del Comité Nacional")):
+		directorio = pandas.read_csv("inputs/csv/directorio_comité_nacional.csv").fillna("").values
+		n = len(directorio)
+		directorio = directorio.reshape((int(n/2),2,3))
+		with doc.create(pl.LongTable(pl.NoEscape(r"p{.5\textwidth} p{.5\textwidth}"))) as table:
+			for line in directorio:
+				table.add_row([bold(line[0,0]), bold(line[1,0])])
+				table.add_row(line[:,1])
+				if line[0,2] != "": correo1 = pl.Command("href", ["mailto:" + pl.NoEscape(line[0,2]), pl.NoEscape(line[0,2])])
+				else: correo1 = ""
+				if line[1,2] != "": correo2 = pl.Command("href", ["mailto:" + pl.NoEscape(line[1,2]), pl.NoEscape(line[1,2])])
+				else: correo2 = ""
+				table.add_row([correo1, correo2])
+				table.add_row(["",""])
+		doc.append(pl.Command("input", "inputs/tex/Colofón.tex"))
 
 doc.generate_pdf('Engargolado', clean_tex=False)

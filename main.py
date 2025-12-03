@@ -79,7 +79,7 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 								new_row.append(number)
 							tabla.add_row(new_row)
 				else:
-					with doc.create(pl.LongTable("|c|l|c|c|c|c|c|c|")) as tabla:
+					with doc.create(pl.LongTable("|c|p{2.5cm}|c|c|c|c|c|c|")) as tabla:
 						tabla.append(pl.NoEscape(r"\hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
 						tabla.append(pl.Command("endfirsthead"))
 						tabla.append(pl.NoEscape(r"\hline \multicolumn{8}{|r|}{{\textit{... continúa de la página previa.}}} \\ \hline \textit{Año}&\multicolumn{1}{|c|}{\textit{País sede}}&\begin{tabular}{c}\textit{No. de}\\\textit{Países}\end{tabular}&\begin{tabular}{c}\textit{Lugar de}\\\textit{México}\end{tabular}&\textit{Oro}&\textit{Plata}&\textit{Bronce}&\textit{M.H.} \\\hline\hline"))
@@ -95,7 +95,22 @@ with doc.create(pl.Chapter("Olimpiadas Internacionales")):
 								except: pass
 								new_row.append(number)
 							tabla.add_row(new_row)
-		
+		with doc.create(pl.Subsection("Total de medallas obtenidas por México")):
+			doc.append("La siguiente tabla contiene el número total de medallas obtenidas por México en las olimpiadas internacionales de las secciones anteriores. Como puede observarse, no contamos con todos los resultados individuales.")
+			with doc.create(pl.LongTable("|l|c|c|c|c|")) as table:
+				table.add_hline()
+				table.add_row([italic("Olimpiada"), italic("Oro"), italic("Plata"), italic("Bronce"), italic("Mención Honorífica")])
+				table.add_hline()
+				table.add_hline()
+				for olympiad in international_olympiads:
+					historial_nacional = pandas.read_csv("inputs/csv/historial_MEX.csv")
+					oros = int(historial_nacional[(historial_nacional["Olimpiada"] == olympiad)]["Oro"].sum(numeric_only=True))
+					platas = int(historial_nacional[(historial_nacional["Olimpiada"] == olympiad)]["Plata"].sum(numeric_only=True))
+					bronces = int(historial_nacional[(historial_nacional["Olimpiada"] == olympiad)]["Bronce"].sum(numeric_only=True))
+					mh = int(historial_nacional[(historial_nacional["Olimpiada"] == olympiad)]["Mencion"].sum(numeric_only=True))
+					table.add_row([olympiad, oros, platas, bronces, mh])
+				table.add_hline()
+
 with doc.create(pl.Chapter("Últimas noticias")):
 	doc.append(pl.Command("input", "inputs/tex/ÚltimasNoticias.tex"))
 
